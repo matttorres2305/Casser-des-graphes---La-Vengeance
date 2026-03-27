@@ -1,5 +1,5 @@
 ### Si ce fichier est utilisé en dehors de son emplacement original dans samos, il faut modifier la variable "filepath" dans le fichier "utils.py" pour y rentrer le chemin
-### absolu du dossier dans lequel tous les fichiers sont situés.
+### absolu du dossier dans lequel tous les fichiers sont situés. Il faudra également installer KaHIP si ce fichier est utilisé en local.
 ### Les fichiers représentant des graphes sont créés et manipulés dans un dossier "graphs", idem pour les coupes et blocs associés dans un dossier "cuts".
 ### Les valeurs par défauts sont celles utilisées dans le rapport. 
 
@@ -68,5 +68,7 @@ if __name__ == "__main__":
     Cette fonction peut nécessiter un temps de calcul élevé."""
     get_zone_distances(blocks_name=f"blocks{n}_k{k}_imb{epsilon}", graph_name=graph_name,
                        distances_name=f"distances_{distance_type}_{graph_name}.npy",
-                       result_name=f"array_{distance_type}_{graph_name}_cuts{n}_k{k}_imb{imb}.npy",
-                       plot_name=f"distrib_{distance_type}_{graph_name}_cuts{n}_k{k}_imb{imb}.png")
+                       result_name=f"array_{distance_type}_{graph_name}_cuts{n}_k{k}_imb{epsilon}.npy",
+                       plot_name=f"distrib_{distance_type}_{graph_name}_cuts{n}_k{k}_imb{epsilon}.png")
+    
+    

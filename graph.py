@@ -20,7 +20,6 @@ epsg_global = 'epsg:4326'
 epsg_paris = 'epsg:2154'
 epsg = epsg_paris
 
-
 """Uses OSMnx to output a raw urban MultiDiGraph from a place (Paris)."""
 def import_graph(place:str, graph_name:str, buffer:int=350):
     gdf = ox.geocoder.geocode_to_gdf(place)

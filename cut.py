@@ -224,9 +224,9 @@ def get_cost(cuts, graph):
     'cuts' et 'graph' peuvent tous les deux contenir le nom du fichier correspondant, ou alors l'objet lui-même : 'cuts' doit alors être une liste de liste (=coupes)
     de tuples (=arêtes) comme stockée par 'make_cuts', et 'graph' un Graph networkx comme stocké par 'model_graph'."""
     if type(cuts) == str:
-        cuts = read_file(path(cuts), "cuts")
+        cuts = read_file(path(cuts, "cuts"))
     if type(graph) == str:
-        graph = read_file(path(graph), "graphs")
+        graph = nx.read_gml(path(graph, "graphs"))
     weight_dict = nx.get_edge_attributes(graph, "weight")
     costs = []
     for cut in cuts:

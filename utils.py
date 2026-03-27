@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 import collections
 import itertools
 
-filepath = "./data/User/workspaceStorage/"
+filepath = "./data/User/workspaceStorage/example"
 
 def path(file:str="", folder:str=""):
     if file:    
